@@ -1,3 +1,4 @@
+import java.text.NumberFormat;
 /********************************************************************
  * Programmer:    Nikita Bazer
  * Class:  CS30S
@@ -15,7 +16,12 @@ public class Employee {
     
     // a new line character that works on every computer system
     final static String nl = System.lineSeparator();
+    // a dollar sign character to add infront of wage and income
+    NumberFormat currency = NumberFormat.getCurrencyInstance();
+
     private static int nextID = 1000;        // unique id number for each circle
+    private final double otMultiplier = 1.5;
+    private final int normalHours = 40;
     
     //*** Instance Variables ***
     
@@ -59,7 +65,7 @@ public class Employee {
     
     //*** Setters ***
     public void setHours(int newHours){
-        hours = newHours-40;
+        hours = newHours;
     }// end set hours
     
     public void setWage(double newWage){
@@ -69,18 +75,26 @@ public class Employee {
     // *** utility methods ***
     
     private double getRegPay(){
-        regPay = this.wage * this.hours;
+        regPay = 0;
+        if (this.hours > normalHours) {
+            regPay = this.wage * normalHours;
+        } else {
+            regPay = this.wage * this.hours;
+        }
         return regPay;
     }// end get regular pay
     
     public double getOtPay(){
-        this.otPay = this.wage * 1.5;
-        otPay = this.otPay * hours;
+        if (this.hours > normalHours) {
+            this.otPay = (this.hours - normalHours) * (this.wage * otMultiplier);
+        } else {
+            this.otPay = 0;
+        }
         return otPay;
     }// end get overtime pay
     
     public double getGrossPay(){
-        grossPay = otPay + regPay;
+        grossPay = getOtPay() + getRegPay();
         return grossPay;
     }// end get gross pay
     
@@ -98,10 +112,10 @@ public class Employee {
        String st;
        
        st = "Employee ID: " + this.getID() + nl;
-       st += "Wage: " + this.wage + nl;
-       st += "Regular Pay: " + getRegPay() + nl;
-       st += "Overtime Pay: " + getOtPay() + nl;
-       st += "Gross Pay: " + getGrossPay() + nl;
+       st += "Wage: " + currency.format(this.wage) + nl;
+       st += "Regular Pay: " + currency.format(getRegPay()) + nl;
+       st += "Overtime Pay: " + currency.format(getOtPay()) + nl;
+       st += "Gross Pay: " + currency.format(getGrossPay()) + nl;
        return st;
     }// end to string
     

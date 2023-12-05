@@ -44,9 +44,9 @@ public class ClientCode {
         System.out.println(pInfo.getBanner());
 
         // ***** Using the Employee Class *****
-        Employee employee1 = new Employee(45, 21.5);
+        Employee employee1 = new Employee(40, 21.5);
         Employee employee2 = new Employee(20, 17.6);
-        Employee employee3 = new Employee(40, 30.9);
+        Employee employee3 = new Employee(40, 21.5);
         Employee employee4 = new Employee(50, 19.0);
 
         
@@ -55,7 +55,8 @@ public class ClientCode {
         System.out.println(employee2.toString());
         System.out.println(employee3.toString());
         System.out.println(employee4.toString());
-        
+        System.out.println("Employees are equal: " + employee2.equals(employee4));
+        System.out.println("Employees are equal: " + employee1.equals(employee3));
         
         // ***** Print Formatted Output *****
 

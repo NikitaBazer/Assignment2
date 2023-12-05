@@ -1,5 +1,5 @@
 /********************************************************************
- * Programmer:	sveinson
+ * Programmer:    Nikita Bazer
  * Class:  CS30S
  *
  * Assignment: Program Info Exericse
@@ -52,11 +52,11 @@ public class ProgramInfo {
     public String getBanner(){
         String bannerOut = "";
         
-    	bannerOut = "*******************************************\n";
-    	bannerOut += "Name:		sveinson\n";
-    	bannerOut += "Class:		CS30S\n";
-    	bannerOut += "Assignment:	" + assignmentName + "\n";
-    	bannerOut += "*******************************************\n\n"; 
+        bannerOut = "*******************************************\n";
+        bannerOut += "Name:        Nikita B\n";
+        bannerOut += "Class:        CS30S\n";
+        bannerOut += "Assignment:    " + assignmentName + "\n";
+        bannerOut += "*******************************************\n\n"; 
         
         return bannerOut;
     } // end getBanner
@@ -71,11 +71,11 @@ public class ProgramInfo {
     public String getBanner(String assignmentName){
         String bannerOut = "";
         
-    	bannerOut = "*******************************************\n";
-    	bannerOut += "Name:		sveinson\n";
-    	bannerOut += "Class:		CS30S\n";
-    	bannerOut += "Assignment:	" + assignmentName + "\n";
-    	bannerOut += "*******************************************\n\n"; 
+        bannerOut = "*******************************************\n";
+        bannerOut += "Name:        sveinson\n";
+        bannerOut += "Class:        CS30S\n";
+        bannerOut += "Assignment:    " + assignmentName + "\n";
+        bannerOut += "*******************************************\n\n"; 
         
         return bannerOut;
     } // end getBanner
@@ -88,7 +88,7 @@ public class ProgramInfo {
     * @return closingMessage  string containing the closing message
     * ****************************************/ 
     public String getClosingMessage(){
-    	return "end of processing";
+        return "end of processing";
     }
     
     //*** Setters ***
