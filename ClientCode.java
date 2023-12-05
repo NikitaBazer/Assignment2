@@ -44,19 +44,19 @@ public class ClientCode {
         System.out.println(pInfo.getBanner());
 
         // ***** Using the Employee Class *****
-        Employee employee1 = new Employee(40, 21.5);
-        Employee employee2 = new Employee(20, 17.6);
-        Employee employee3 = new Employee(40, 21.5);
-        Employee employee4 = new Employee(50, 19.0);
+        Employee employee1 = new Employee(48, 22.4);    //create employee one
+        Employee employee2 = new Employee(27, 17.6);    //create employee two
+        Employee employee3 = new Employee(40, 29.12);   //create employee three
+        Employee employee4 = new Employee(51, 19.0);    //create employee four
 
         
         // setters
-        System.out.println(employee1.toString());
-        System.out.println(employee2.toString());
-        System.out.println(employee3.toString());
-        System.out.println(employee4.toString());
-        System.out.println("Employees are equal: " + employee2.equals(employee4));
-        System.out.println("Employees are equal: " + employee1.equals(employee3));
+        System.out.println(employee1.toString());// print employee one
+        System.out.println(employee2.toString());// print employee two
+        System.out.println(employee3.toString());// print employee three
+        System.out.println(employee4.toString());// print employee four
+        System.out.println("Employees are equal: " + employee2.equals(employee4));// check and print if employee 2 is equal to employee 4
+        System.out.println("Employees are equal: " + employee1.equals(employee3));// check and print if employee 1 is equal to employee 2
         
         // ***** Print Formatted Output *****
 

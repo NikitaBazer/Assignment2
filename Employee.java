@@ -20,8 +20,8 @@ public class Employee {
     NumberFormat currency = NumberFormat.getCurrencyInstance();
 
     private static int nextID = 1000;        // unique id number for each circle
-    private final double otMultiplier = 1.5;
-    private final int normalHours = 40;
+    private final double otMultiplier = 1.5; // multiplier to find overtime pay
+    private final int normalHours = 40;      // normal work week hours
     
     //*** Instance Variables ***
     
@@ -47,54 +47,55 @@ public class Employee {
     }// end employee
     
     private int getNextID(){
-        return nextID++;
+        return nextID++;// get the next id of an employee
     }// end get unique id
     
     //*** Getters ***
     public int getID(){
-        return this.id;
+        return this.id;// get the id of an employee
     }// end get id
     
       public int getHours(){
-        return this.hours;
+        return this.hours;// get the hours of an employee
     }// end get hours
     
        public double getWage(){
-        return this.wage;
+        return this.wage;// get the wage of an employee
     }// end set regular pay
     
     //*** Setters ***
     public void setHours(int newHours){
-        hours = newHours;
+        hours = newHours;// set the number of hours worked
     }// end set hours
     
     public void setWage(double newWage){
-        this.wage = newWage; 
+        this.wage = newWage;// set the wage of the employee
     }// end set regular pay
     
     // *** utility methods ***
-    
     private double getRegPay(){
-        regPay = 0;
-        if (this.hours > normalHours) {
-            regPay = this.wage * normalHours;
-        } else {
-            regPay = this.wage * this.hours;
-        }
+        regPay = 0;// set regular pay to zero
+        if (this.hours > normalHours) {// if for checking if there is more than 40 hours worked
+            regPay = this.wage * normalHours;// calculate pay if more than 40 hours are worked
+        }// end if 
+        else {
+            regPay = this.wage * this.hours;// calculate pay if 40 or less hours are worked
+        }// end else
         return regPay;
     }// end get regular pay
     
     public double getOtPay(){
-        if (this.hours > normalHours) {
-            this.otPay = (this.hours - normalHours) * (this.wage * otMultiplier);
-        } else {
-            this.otPay = 0;
-        }
+        if (this.hours > normalHours) {// check if more than 40 hours are worked
+            this.otPay = (this.hours - normalHours) * (this.wage * otMultiplier);// calculate over time pay if more than 40 hours are worked
+        }// end if 
+        else {
+            this.otPay = 0;// else if no over time pay is needed
+        }// end else
         return otPay;
     }// end get overtime pay
     
     public double getGrossPay(){
-        grossPay = getOtPay() + getRegPay();
+        grossPay = getOtPay() + getRegPay();// calculate gross pay of an employee
         return grossPay;
     }// end get gross pay
     
@@ -102,7 +103,7 @@ public class Employee {
     boolean equals(Employee oc){
         boolean equal;
         
-        equal = this.getGrossPay() == oc.getGrossPay();
+        equal = this.getGrossPay() == oc.getGrossPay();// method to check if 2 employees are equal in gross pay
         
         return equal;
     }// end equals
