@@ -20,8 +20,8 @@ public class Employee {
     NumberFormat currency = NumberFormat.getCurrencyInstance();
 
     private static int nextID = 1000;        // unique id number for each employee
-    private final double otMultiplier = 1.5; // multiplier to find overtime pay
-    private final int normalHours = 40;      // normal work week hours
+    private final double OTMULTIPLIER = 1.5; // multiplier to find overtime pay
+    private final int NORMALHOUR = 40;      // normal work week hours
 
     //*** Instance Variables ***
 
@@ -75,8 +75,8 @@ public class Employee {
     // *** utility methods ***
     public double getRegPay(){
         regPay = 0; // set regular pay to zero
-        if (this.hours > normalHours) { // if for checking if there is more than 40 hours worked
-            regPay = this.wage * normalHours; // calculate pay if more than 40 hours are worked
+        if (this.hours > NORMALHOUR) { // if for checking if there is more than 40 hours worked
+            regPay = this.wage * NORMALHOUR; // calculate pay if more than 40 hours are worked
         }// end if 
         else {
             regPay = this.wage * this.hours; // calculate pay if 40 or less hours are worked
@@ -85,8 +85,8 @@ public class Employee {
     }// end get regular pay
 
     public double getOtPay(){
-        if (this.hours > normalHours) { // check if more than 40 hours are worked
-            this.otPay = (this.hours - normalHours) * (this.wage * otMultiplier); // calculate over time pay if more than 40 hours are worked
+        if (this.hours > NORMALHOUR) { // check if more than 40 hours are worked
+            this.otPay = (this.hours - NORMALHOUR) * (this.wage * OTMULTIPLIER); // calculate over time pay if more than 40 hours are worked
         }// end if 
         else {
             this.otPay = 0; // else if no over time pay is needed

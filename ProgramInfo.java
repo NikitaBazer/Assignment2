@@ -89,7 +89,7 @@ public class ProgramInfo {
     * ****************************************/ 
     public String getClosingMessage(){
         return "end of processing";
-    }
+    }// end get closing message
 
     //*** Setters ***
 
