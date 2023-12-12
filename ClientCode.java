@@ -7,7 +7,7 @@ import java.text.NumberFormat;
  *  Name:           Nikita Bazer
  *  Class:          CS30S
  * 
- *  Assignment:     Employee Object Assigmnet
+ *  Assignment:     Employee Assingment
  * 
  *  Description:    Assingment 2 calculating wages with OOP
  * 
@@ -37,7 +37,7 @@ public class ClientCode {
         //Scanner scanner = new Scanner(System.in);
 
         // file io buffers for reading and writing to text files
-        
+
         // ***** print banners *****
 
         System.out.println(pInfo.getBanner());
@@ -48,15 +48,15 @@ public class ClientCode {
         Employee employee3 = new Employee(40, 29.12);   //create employee three
         Employee employee4 = new Employee(51, 19.0);    //create employee four
 
-        
+
         // setters
-        System.out.println(employee1.toString());// print employee one
-        System.out.println(employee2.toString());// print employee two
-        System.out.println(employee3.toString());// print employee three
-        System.out.println(employee4.toString());// print employee four
-        System.out.println("Employees are equal: " + employee2.equals(employee4));// check and print if employee 2 is equal to employee 4
-        System.out.println("Employees are equal: " + employee1.equals(employee3));// check and print if employee 1 is equal to employee 2
-        
+        System.out.println(employee1.toString()); // print employee one
+        System.out.println(employee2.toString()); // print employee two
+        System.out.println(employee3.toString()); // print employee three
+        System.out.println(employee4.toString()); // print employee four
+        System.out.println("Employees are equal: " + employee2.equals(employee4)); // check and print if employee 2 is equal to employee 4
+        System.out.println("Employees are equal: " + employee1.equals(employee3)); // check and print if employee 1 is equal to employee 2
+
         // ***** Print Formatted Output *****
 
         // ***** Closing Message *****

@@ -2,7 +2,7 @@
  * Programmer:    Nikita Bazer
  * Class:  CS30S
  *
- * Assignment: Program Info Exericse
+ * Assignment: Program Info 
  *
  * Description: creates a program info object to print banners and closing messages
  *              to console, JOptionPane and output file
@@ -12,13 +12,13 @@
 
 public class ProgramInfo {
     //*** Class Variables ***
-    
+
     //*** Instance Variables ***
-    
+
     private String assignmentName = "Assignment 2";
-    
+
     //*** Construcors ***
-    
+
     /*****************************************
     * Description: create a new ProgramInfo object with the assignment
     *               property set to appropriate value
@@ -30,7 +30,7 @@ public class ProgramInfo {
     public ProgramInfo(String name){
         assignmentName = name;
     } // end initialized constructor
-    
+
     /*****************************************
     * Description: create a new dsefault ProgramInfo object
     * 
@@ -38,10 +38,10 @@ public class ProgramInfo {
     * none
     * ****************************************/
     public ProgramInfo(){
-        
+
     } // end default constructor
     //*** Getters ***
-    
+
     /*****************************************
     * Description: create and return a string for the program info banner
     * 
@@ -51,16 +51,16 @@ public class ProgramInfo {
     * ****************************************/ 
     public String getBanner(){
         String bannerOut = "";
-        
+
         bannerOut = "*******************************************\n";
         bannerOut += "Name:        Nikita B\n";
         bannerOut += "Class:        CS30S\n";
         bannerOut += "Assignment:    " + this.assignmentName + "\n";
         bannerOut += "*******************************************\n\n"; 
-        
+
         return bannerOut;
     } // end getBanner
-    
+
     /*****************************************
     * Description: create and return a string for the program info banner
     * 
@@ -70,16 +70,16 @@ public class ProgramInfo {
     * ****************************************/ 
     public String getBanner(String assignmentName){
         String bannerOut = "";
-        
+
         bannerOut = "*******************************************\n";
         bannerOut += "Name:        Nikita B\n";
         bannerOut += "Class:        CS30S\n";
         bannerOut += "Assignment:    " + assignmentName + "\n";
         bannerOut += "*******************************************\n\n"; 
-        
+
         return bannerOut;
     } // end getBanner
-    
+
     /*****************************************
     * Description: create and return a string for the closing message
     * 
@@ -90,7 +90,7 @@ public class ProgramInfo {
     public String getClosingMessage(){
         return "end of processing";
     }
-    
+
     //*** Setters ***
-    
+
 } // end of public class
