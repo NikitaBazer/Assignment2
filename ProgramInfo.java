@@ -15,7 +15,7 @@ public class ProgramInfo {
     
     //*** Instance Variables ***
     
-    private String assignmentName = "";
+    private String assignmentName = "Assignment 2";
     
     //*** Construcors ***
     
@@ -55,7 +55,7 @@ public class ProgramInfo {
         bannerOut = "*******************************************\n";
         bannerOut += "Name:        Nikita B\n";
         bannerOut += "Class:        CS30S\n";
-        bannerOut += "Assignment:    " + assignmentName + "\n";
+        bannerOut += "Assignment:    " + this.assignmentName + "\n";
         bannerOut += "*******************************************\n\n"; 
         
         return bannerOut;
@@ -72,7 +72,7 @@ public class ProgramInfo {
         String bannerOut = "";
         
         bannerOut = "*******************************************\n";
-        bannerOut += "Name:        sveinson\n";
+        bannerOut += "Name:        Nikita B\n";
         bannerOut += "Class:        CS30S\n";
         bannerOut += "Assignment:    " + assignmentName + "\n";
         bannerOut += "*******************************************\n\n"; 

@@ -7,10 +7,9 @@ import java.text.NumberFormat;
  *  Name:           Nikita Bazer
  *  Class:          CS30S
  * 
- *  Assignment:     Employee Object Example
+ *  Assignment:     Employee Object Assigmnet
  * 
- *  Description:    Example of a simple Employee class 
- *                  and using it to instantiate Employee objects
+ *  Description:    Assingment 2 calculating wages with OOP
  * 
  *************************************************************/
 
@@ -34,7 +33,7 @@ public class ClientCode {
         // a new line character that works on every computer system
 
         // ***** objects *****
-        ProgramInfo pInfo = new ProgramInfo("Employee Object Example");
+        ProgramInfo pInfo = new ProgramInfo();
         //Scanner scanner = new Scanner(System.in);
 
         // file io buffers for reading and writing to text files
